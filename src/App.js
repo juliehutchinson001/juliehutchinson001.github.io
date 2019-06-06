@@ -1,11 +1,12 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Edit and save to reload.</p>
-      </header>
+      <Header />
+      <Route path="/" exact component={App} />
     </div>
   );
 }

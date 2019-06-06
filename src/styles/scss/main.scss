@@ -1,1 +1,29 @@
-@import './helpers/variables.scss';
+@import './helpers/_variables.scss';
+@import './components/header';
+$Muli-font-path: "../../fonts/Muli";
+
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+
+    src: url("#{$Muli-font-path}/Muli-Light.ttf") format("truetype");
+
+    font-family: "Muli";
+    font-weight: 300;
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$Muli-font-path}/Muli-Regular.ttf") format("truetype");
+
+    font-family: "Muli";
+    font-weight: 400;
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$Muli-font-path}/Muli-Bold.ttf") format("truetype");
+
+    font-family: "Muli";
+    font-weight: 700;
+}

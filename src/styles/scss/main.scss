@@ -1,11 +1,8 @@
 @import './helpers/_variables.scss';
 @import './components/header';
-$Muli-font-path: "../../fonts/Muli";
-
 
 @font-face {
     // This is parsed as a normal function call that takes a quoted string.
-
     src: url("#{$Muli-font-path}/Muli-Light.ttf") format("truetype");
 
     font-family: "Muli";

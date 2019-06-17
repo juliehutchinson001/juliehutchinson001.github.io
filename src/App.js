@@ -1,14 +1,17 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './components/header';
-import ProjectsComponent from './components/projects';
+import ProjectsContainer from './components/home/projects-container';
 import Footer from './components/footer';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Route path="/" exact component={ProjectsComponent} />
+      <Switch>
+        <Redirect from="/projects" to="/" />
+        <Route path="/" exact component={ProjectsContainer} />
+      </Switch>
       <Footer />
     </div>
   );

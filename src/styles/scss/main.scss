@@ -1,5 +1,11 @@
 @import './helpers/_variables.scss';
 @import './components/header';
+@import './components/footer';
+@import './components/projects-dashboard';
+@import './components/projects';
+@import './components/about';
+@import './components/blogs-dashboard';
+@import './components/blog';
 
 @font-face {
     // This is parsed as a normal function call that takes a quoted string.

@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Redirect from="/projects" to="/" />
-        <Route path="/" exact component={ProjectsContainer} />
+        <Redirect from="/" to="/projects" />
+        <Route path="/projects" exact component={ProjectsContainer} />
       </Switch>
       <Footer />
     </div>

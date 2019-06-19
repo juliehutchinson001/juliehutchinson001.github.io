@@ -1,4 +1,4 @@
-import imgUrls from './images-urls';
+import imgUrls from './images-info';
 
 const isWithinBoundry = idx => {
   return idx > -1 && idx < imgUrls.length;

@@ -17,23 +17,25 @@
   align-items: center; }
 
 .navigation__list--home-links {
+  margin: 0;
+  padding: 0;
   list-style: none;
-  margin: 0 auto 0 1rem;
-  padding: 0; }
+  margin-right: auto;
+  margin-left: 1rem; }
 
 .navigation__link--home {
   color: #F2F5F8;
   margin-right: auto;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none; }
 
 .navigation__image-link--home {
   background-color: #F2F5F8;
-  height: 30px;
-  width: 30px;
+  height: 2.14rem;
+  width: 2.14rem;
   border: 1px solid #F2F5F8;
   border-radius: 1rem;
   margin-right: 0.5rem; }
@@ -61,6 +63,7 @@ body {
   padding: 0; }
 
 .App {
+  background-color: #F2F5F8;
   height: 100%;
   width: 100%;
   font-family: "Muli", sans-serif;
@@ -76,17 +79,17 @@ img {
   color: #F2F5F8;
   height: 200px;
   width: 100%;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between; }
 
 .footer__additional-info {
   width: 100px;
-  margin-left: 20px; }
+  margin-left: 1.43rem; }
 
 .footer__contact-link {
   color: #F2F5F8;
-  margin-right: 20px;
+  margin-right: 1.43rem;
   text-decoration: none; }
 
 @font-face {

@@ -2,24 +2,23 @@
   background-color: $darkest-blue;
   color: $lightest-grey;
 
-  height: 200px;
+  height: $component-height;
   width: $w-full;
 
-  align-items: center;
-  display: flex;
+  @include display-flex;
   justify-content: space-between;
 }
 
 .footer__additional-info {
   width: 100px;
 
-  margin-left: 20px;
+  margin-left: 1.43rem;
 }
 
 .footer__contact-link {
   color: $lightest-grey;
 
-  margin-right: 20px;
+  margin-right: 1.43rem;
 
   text-decoration: none;
 }

@@ -1,16 +1,28 @@
 
 /* Color */
 $darkest-blue: #191E38;
+$dark-blue: #202647;
+$light-grey: #a7aaac;
 $lightest-grey: #F2F5F8;
 
 /* Dimension */
+$component-height: 200px;
 $h-full: 100%;
 $h-screen: 100vh;
 $w-full: 100%;
 $w-screen: 100vw;
 
 /* Position */
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
+@mixin display-flex {
+  display: flex;
+  align-items: center;
+}
 
 /* Routing */
 $Muli-font-path: "../assets/fonts/Muli";

@@ -1,25 +1,24 @@
 .navigation__top {
   background-color: $darkest-blue;
 
-  height: 200px;
+  height: $component-height;
   width: $w-full;
 
   font-size: 0.7rem;
 }
 
 .navigation__list {
-  height: 200px;
+  height: $component-height;
   margin: 0;
   padding: 0;
 
-  display: flex;
-  align-items: center;
+  @include display-flex;
 }
 
 .navigation__list--home-links {
-  list-style: none;
-  margin: 0 auto 0 1rem;
-  padding: 0;
+  @include reset-list;
+  margin-right: auto;
+  margin-left: 1rem;
 }
 
 .navigation__link--home {
@@ -30,7 +29,7 @@
   display: flex;
   align-items: center;
 
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -38,8 +37,8 @@
 .navigation__image-link--home {
   background-color: $lightest-grey;
 
-  height: 30px;
-  width: 30px;
+  height: 2.14rem;
+  width: 2.14rem;
 
   border: 1px solid $lightest-grey;
   border-radius: 1rem;

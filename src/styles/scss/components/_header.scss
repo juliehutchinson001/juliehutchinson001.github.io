@@ -1,14 +1,10 @@
-.navigation__top--container {
+.navigation__top {
   background-color: $darkest-blue;
 
   height: 200px;
+  width: $w-full;
 
   font-size: 0.7rem;
-}
-
-.navigation__top {
-  height: $h-full;
-  width: $w-full;
 }
 
 .navigation__list {

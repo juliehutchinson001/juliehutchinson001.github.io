@@ -3,14 +3,11 @@
 /* Position */
 /* Routing */
 /* Typography */
-.navigation__top--container {
+.navigation__top {
   background-color: #191E38;
   height: 200px;
+  width: 100%;
   font-size: 0.7rem; }
-
-.navigation__top {
-  height: 100%;
-  width: 100%; }
 
 .navigation__list {
   height: 200px;

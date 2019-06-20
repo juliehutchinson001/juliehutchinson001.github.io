@@ -1,0 +1,25 @@
+.portfolio__footer {
+  background-color: $darkest-blue;
+  color: $lightest-grey;
+
+  height: 200px;
+  width: $w-full;
+
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__additional-info {
+  width: 100px;
+
+  margin-left: 20px;
+}
+
+.footer__contact-link {
+  color: $lightest-grey;
+
+  margin-right: 20px;
+
+  text-decoration: none;
+}

@@ -1,5 +1,5 @@
 .navigation__top--container {
-  background-color: #191E38;
+  background-color: $darkest-blue;
 
   height: 200px;
 
@@ -7,15 +7,14 @@
 }
 
 .navigation__top {
-  width: 100%;
-  height: 100%;
+  width: $w-full;
+  height: $h-full;
 }
 
 .navigation__list {
   height: 200px;
   margin: 0;
   padding: 0;
-  width: 100vw;
 
   display: flex;
   align-items: center;
@@ -28,7 +27,7 @@
 }
 
 .navigation__link--home {
-  color: #F2F5F8;
+  color: $lightest-grey;
 
   margin: 0 auto 0 0px;
 
@@ -45,8 +44,8 @@
   width: 30px;
   height: 30px;
   border-radius: 1rem;
-  border: 1px solid #F2F5F8;
-  background-color: #F2F5F8;
+  border: 1px solid $lightest-grey;
+  background-color: $lightest-grey;
   margin-right: 0.5rem;
 }
 
@@ -57,7 +56,7 @@
 }
 
 .navigation__link {
-  color: #F2F5F8;
+  color: $lightest-grey;
 
   font-weight: 700;
   margin-right: 1rem;

@@ -1,0 +1,119 @@
+.projects__main-container {
+  color: $lightest-grey;
+
+  border: 9px solid purple;
+
+  justify-content: center;
+  @include display-flex;
+  flex-direction: column;
+}
+
+/* Carousel Component */
+
+.carousel__outer-wrapper {
+  width: 400px;
+
+  border: 2px solid greenyellow;
+
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel__inner-wrapper {
+  transition: transform 1s ease;
+
+  height: $h-full;
+  width: $w-full;
+
+  @include display-flex;
+  justify-content: flex-start;
+
+}
+
+/* Images Component */
+
+.carousel__slide-container--thumbnail {
+  border: 2px solid green;
+
+  height: 400px;
+
+  @include reset-list;
+}
+
+.carousel__slide-image {
+  height: 300px;
+  width: 400px;
+}
+
+
+/* Arrows Component */
+
+.carousel__slide-button--prev {
+  background: none;
+  color: $dark-blue;
+
+  width: 120px;
+
+  border: 1px solid $darkest-blue;
+  outline: none;
+
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.carousel__slide-button--next {
+  background: none;
+  color: $dark-blue;
+
+  width: 120px;
+
+  border: 1px solid $darkest-blue;
+  outline: none;
+
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+/* Bottom navigation (Buttons) */
+
+.slider__buttons-container--bottom {
+  height: 100px;
+  width: $w-full;
+
+  @include display-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-act {
+  background-color: $dark-blue;
+
+  height: 5px;
+  width: 50px;
+
+  border: 1px solid $dark-blue;
+  border-radius: 20px;
+
+  margin-right: 5px;
+}
+
+.button-no-act {
+  background-color: transparent;
+
+  height: 5px;
+  width: 50px;
+
+  border: 1px solid $dark-blue;
+  border-radius: 20px;
+
+  margin-right: 5px;
+}
+
+.slider__nav--dots {
+  width: $w-full;
+  @include display-flex;
+  justify-content: center;
+}
+

@@ -94,7 +94,6 @@ img {
 
 .projects__main-container {
   color: #F2F5F8;
-  border: 9px solid purple;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -103,7 +102,6 @@ img {
 /* Carousel Component */
 .carousel__outer-wrapper {
   width: 400px;
-  border: 2px solid greenyellow;
   display: flex;
   justify-content: center;
   overflow: hidden; }
@@ -118,7 +116,6 @@ img {
 
 /* Images Component */
 .carousel__slide-container--thumbnail {
-  border: 2px solid green;
   height: 400px;
   margin: 0;
   padding: 0;
@@ -127,6 +124,13 @@ img {
 .carousel__slide-image {
   height: 300px;
   width: 400px; }
+
+.carousel__slide--project-header {
+  color: #191E38;
+  border: 0;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 800; }
 
 /* Arrows Component */
 .carousel__slide-button--prev {

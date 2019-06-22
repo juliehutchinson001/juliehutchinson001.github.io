@@ -1,6 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-const ContactContainer = () => <div>this is the contact form</div>;
+const ContactContainer = () => {
+  return (
+    <section>
+      this is the contact container<p>hello</p>
+    </section>
+  );
+};
 
 export default ContactContainer;

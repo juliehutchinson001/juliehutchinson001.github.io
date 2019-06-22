@@ -17,4 +17,26 @@ describe('Header Component fully render', () => {
       headerComponent.find('[data-test-navigation-home-link]').children().length
     ).toBe(2);
   });
+
+  it(`fully renders component's text`, () => {
+    expect.assertions(3);
+    expect(
+      headerComponent
+        .find('[data-test-navigation-home-link]')
+        .childAt(1)
+        .text()
+    ).toBe('Julie Hutchinson');
+    expect(
+      headerComponent
+        .find('[data-test-navigation-blogs-link]')
+        .childAt(0)
+        .text()
+    ).toBe('BLOGS');
+    expect(
+      headerComponent
+        .find('[data-test-navigation-about-link]')
+        .childAt(0)
+        .text()
+    ).toBe('ABOUT');
+  });
 });

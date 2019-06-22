@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Carousel = ({ children, headerOfProject, pixelsToMove }) => (
-  <div className="window">
-    <h1>{headerOfProject}</h1>
-    <section
+const Carousel = ({ children, pixelsToMove }) => (
+  <section className="carousel__outer-wrapper" data-test-carousel-outer-wrapper>
+    <div
       style={{ transform: `translateX(${pixelsToMove}px)` }}
-      className="app__carousel"
+      className="carousel__inner-wrapper"
+      data-test-carousel-inner-wrapper
     >
       {children}
-    </section>
-  </div>
+    </div>
+  </section>
 );
 
 Carousel.propTypes = {
@@ -19,7 +19,6 @@ Carousel.propTypes = {
     PropTypes.element,
     PropTypes.node,
   ]).isRequired,
-  headerOfProject: PropTypes.string.isRequired,
   pixelsToMove: PropTypes.number.isRequired,
 };
 

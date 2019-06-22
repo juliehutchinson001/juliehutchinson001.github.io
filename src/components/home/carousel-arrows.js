@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 const Arrow = ({ direction, handleSlide, symbolCode }) => (
   <button
     type="button"
-    className={`app__scroller--${direction}`}
+    className={`carousel__slide-button--${direction}`}
+    data-test-carousel-slide-button-direction
     onClick={handleSlide}
   >
     {symbolCode}

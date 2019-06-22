@@ -3,11 +3,18 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="portfolio__footer">
-      <small className="footer__additional-info">
+    <footer className="portfolio__footer" data-test-portfolio-footer-wrapper>
+      <small
+        className="footer__additional-info"
+        data-test-footer-additional-info
+      >
         Click on the image for project details
       </small>
-      <Link className="footer__contact-link" to="/contact">
+      <Link
+        className="footer__contact-link"
+        to="/contact"
+        data-test-portfolio-contact-link
+      >
         GET IN TOUCH
       </Link>
     </footer>

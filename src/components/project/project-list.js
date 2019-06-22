@@ -5,7 +5,7 @@ import imgUrls from '../helpers/images-info';
 
 const Images = () => {
   const allImages = imgUrls.map(eachImg => (
-    <div key={eachImg.projectName}>
+    <div key={eachImg.projectName} data-test-carousel-slide-project-wrapper>
       <h1
         className="carousel__slide--project-header"
         data-test-carousel-slide-project-header
@@ -24,7 +24,11 @@ const Images = () => {
           alt={eachImg.url}
         />
       </Link>
-      <Route path="/" component={IndividualProject} />
+      <Route
+        data-test-carousel-route-link
+        path="/"
+        component={IndividualProject}
+      />
     </div>
   ));
   return allImages;

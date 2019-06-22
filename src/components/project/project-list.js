@@ -1,16 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment } from 'react';
+import { Link, Route } from 'react-router-dom';
+import IndividualProject from './individual-project';
 import imgUrls from '../helpers/images-info';
 
 const Images = () => {
-  return imgUrls.map((eachImg, id) => (
-    <li key={eachImg.projectName} className="">
-      <Link to={`/projects/${id}`}>
-        <img className="" src={eachImg.url} alt={eachImg.url} />
+  const allImages = imgUrls.map(eachImg => (
+    <Fragment key={eachImg.projectName}>
+      <Link
+        className="carousel__slide--thumbnail-link"
+        to={`/projects/${eachImg.sluggedName}`}
+        data-test-carousel-slide-link
+      >
+        <h1
+          className="carousel__slide--project-header"
+          data-test-carousel-slide-project-header
+        >
+          {eachImg.projectName}
+        </h1>
+        <img
+          className="carousel__slide-image"
+          data-test-carousel-slide-image
+          src={eachImg.url}
+          alt={eachImg.url}
+        />
       </Link>
-    </li>
+      <Route path="/" component={IndividualProject} />
+    </Fragment>
   ));
-  // <Route path={`${match.path}/:topicId`} component={IndividualProject} />
+  return allImages;
+
+  // <Route path={`${match.path}/:topicId`} component={<div>{'IndividualProject'}</div>
 };
 
 export default Images;

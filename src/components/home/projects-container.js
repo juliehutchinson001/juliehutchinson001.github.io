@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Arrow from './carousel-arrows';
 import Carousel from './carousel-container';
 import BottomButtonsSlider from './bottom-buttons';
-import getImages, { imgUrls } from '../helpers/images-urls';
+import Images from '../project/project-list';
 import isWithinBoundry from '../helpers/is-index-within';
 // import PropTypes from 'prop-types';
 
@@ -37,25 +36,10 @@ class ProjectsContainer extends Component {
     const { activeImageIdx, pixelsToMove } = this.state;
 
     return (
-      <main className="App">
-        <Arrow
-          handleSlide={() => this.goToImage('prev')}
-          direct="prev"
-          symbolCode="&#12296;"
-        />
-
-        <Carousel pixelsToMove={pixelsToMove} headerOfProject="blah">
-          {getImages()}
-        </Carousel>
-
-        <Arrow
-          handleSlide={() => this.goToImage('next')}
-          direct="next"
-          symbolCode="&#12297;"
-        />
-
+      <main className="projects__main-container" data-test-project-container>
+        <Carousel pixelsToMove={pixelsToMove}>{Images()}</Carousel>
         <BottomButtonsSlider
-          imgUrls={imgUrls}
+          handleSlide={c => this.goToImage(c)}
           activeButton={activeImageIdx}
           slideTo={idx => this.slideTo(idx)}
         />

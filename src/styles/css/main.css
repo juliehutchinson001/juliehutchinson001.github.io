@@ -92,6 +92,9 @@ img {
   margin-right: 1.43rem;
   text-decoration: none; }
 
+.projects__main-container {
+  height: 800px; }
+
 @font-face {
   src: url("../assets/fonts/Muli/Muli-Light.ttf") format("truetype");
   font-family: "Muli";

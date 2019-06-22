@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Arrow from './carousel-arrows';
 import imgUrls from '../helpers/images-info';
 
-const BottomButtonsSlider = ({ activeButton, handleSlide, slideTo }) => {
+const BottomButtonsSlider = ({ activeButton, children, slideTo }) => {
   const multipleButtons = imgUrls.map((ima, idx) => (
     <button
       type="button"
@@ -18,16 +17,7 @@ const BottomButtonsSlider = ({ activeButton, handleSlide, slideTo }) => {
       data-test-slider-buttons-bottom-wrapper
       className="slider__buttons-container--bottom"
     >
-      <Arrow
-        handleSlide={(a = 'prev') => handleSlide(a)}
-        direction="prev"
-        symbolCode="&#8592;"
-      />
-      <Arrow
-        handleSlide={(b = 'next') => handleSlide(b)}
-        direction="next"
-        symbolCode="&#8594;"
-      />
+      {children}
       <div className="slider__nav--dots">{multipleButtons}</div>
     </section>
   );
@@ -35,7 +25,11 @@ const BottomButtonsSlider = ({ activeButton, handleSlide, slideTo }) => {
 
 BottomButtonsSlider.propTypes = {
   slideTo: PropTypes.oneOfType([PropTypes.func]).isRequired,
-  handleSlide: PropTypes.oneOfType([PropTypes.func]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.node,
+    PropTypes.element,
+  ]).isRequired,
   activeButton: PropTypes.number.isRequired,
 };
 

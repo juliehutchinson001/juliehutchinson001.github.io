@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Carousel from './carousel-container';
 import BottomButtonsSlider from './bottom-buttons';
 import Images from '../project/project-list';
+import Arrow from './carousel-arrows';
+
 import isWithinBoundry from '../helpers/is-index-within';
 // import PropTypes from 'prop-types';
 
@@ -39,10 +41,20 @@ class ProjectsContainer extends Component {
       <main className="projects__main-container" data-test-project-container>
         <Carousel pixelsToMove={pixelsToMove}>{Images()}</Carousel>
         <BottomButtonsSlider
-          handleSlide={c => this.goToImage(c)}
           activeButton={activeImageIdx}
           slideTo={idx => this.slideTo(idx)}
-        />
+        >
+          <Arrow
+            handleSlide={() => this.goToImage('prev')}
+            direction="prev"
+            symbolCode="&#8592;"
+          />
+          <Arrow
+            handleSlide={() => this.goToImage('next')}
+            direction="next"
+            symbolCode="&#8594;"
+          />
+        </BottomButtonsSlider>
       </main>
     );
   }

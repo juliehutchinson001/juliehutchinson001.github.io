@@ -48,7 +48,7 @@ const Header = () => {
           <Link
             to="/about"
             className="navigation__link"
-            data-test-navigation-blogs-link
+            data-test-navigation-about-link
           >
             ABOUT
           </Link>

@@ -11,7 +11,7 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.widthImage = 400;
+    this.widthImage = 300;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,

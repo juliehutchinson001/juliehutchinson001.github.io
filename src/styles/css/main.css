@@ -101,7 +101,7 @@ img {
 
 /* Carousel Component */
 .carousel__outer-wrapper {
-  width: 400px;
+  width: 300px;
   display: flex;
   justify-content: center;
   overflow: hidden; }
@@ -116,20 +116,20 @@ img {
 
 /* Images Component */
 .carousel__slide-container--thumbnail {
-  height: 400px;
+  height: 300px;
   margin: 0;
   padding: 0;
   list-style: none; }
 
 .carousel__slide-image {
   height: 300px;
-  width: 400px; }
+  width: 300px; }
 
 .carousel__slide--project-header {
   color: #191E38;
   border: 0;
   width: 100%;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800; }
 
 /* Arrows Component */
@@ -163,7 +163,7 @@ img {
 .button-act {
   background-color: #202647;
   height: 5px;
-  width: 50px;
+  width: 40px;
   border: 1px solid #202647;
   border-radius: 20px;
   margin-right: 5px; }
@@ -171,7 +171,7 @@ img {
 .button-no-act {
   background-color: transparent;
   height: 5px;
-  width: 50px;
+  width: 40px;
   border: 1px solid #202647;
   border-radius: 20px;
   margin-right: 5px; }

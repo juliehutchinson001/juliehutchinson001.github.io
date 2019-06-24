@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 const BioContainer = () => (
   <main className="bio__main-container" data-test-bio-container>
@@ -15,14 +14,13 @@ const BioContainer = () => (
       <p className="bio__second--paragraph" data-test-bio-second-paragraph>
         {`Julie's greatest interests from the moment she relocated are
       focused on semantic application of UI and proper layout of websites. In
-      her free time she designs code snippets to test her UI abilities and
+      her free time she designs code snippets to test her UI skillset and
       expand them.`}
       </p>
       <p className="bio__third--paragraph" data-test-bio-third-paragraph>
-        She graduated as a BS Electronics Engineer where she discovered her
-        passion for programming by building an autonomous robot and programming
-        it to follow a person based on an specific color being held by the
-        person to follow; as well as, programming a robotic arm for her thesis.
+        Julie graduated from her BS in Electronics Engineering, where she
+        discovered her passion by building a number of projects with a
+        programming focus including her thesis.
       </p>
     </section>
     <section className="bio__secondary--info" data-test-bio-secondary-info>

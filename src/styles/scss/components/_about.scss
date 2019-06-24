@@ -27,6 +27,32 @@
 }
 
 .bio__secondary--info {
+  width: $w-full;
+}
+
+.bio__subheader {
   margin: 1rem 1.8rem;
+}
+
+.bio__list-of-skills {
+  margin: 1rem 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .bio__main-container {
+    background-color: $darkest-blue;
+
+    font-size: 1.5rem;
+  }
+
+  .bio__intro-container, .bio__secondary--info {
+    background-color: $lightest-grey;
+    color: $darkest-blue;
+
+    width: 70%;
+    max-width: 1024px;
+
+    line-height: 2;
+  }
 }
 

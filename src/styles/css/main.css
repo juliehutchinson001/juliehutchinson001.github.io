@@ -207,8 +207,25 @@ img {
   margin: 1rem 1.8rem; }
 
 .bio__secondary--info {
+  width: 100%; }
+
+.bio__subheader {
   margin: 1rem 1.8rem; }
 
+.bio__list-of-skills {
+  margin: 1rem 1.8rem; }
+
+@media screen and (min-width: 768px) {
+  .bio__main-container {
+    background-color: #191E38;
+    font-size: 1.5rem; }
+
+  .bio__intro-container, .bio__secondary--info {
+    background-color: #F2F5F8;
+    color: #191E38;
+    width: 70%;
+    max-width: 1024px;
+    line-height: 2; } }
 @font-face {
   src: url("../assets/fonts/Muli/Muli-Light.ttf") format("truetype");
   font-family: "Muli";

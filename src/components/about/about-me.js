@@ -16,11 +16,13 @@ const BioContainer = () => (
         {`Julie's greatest interests from the moment she relocated are
       focused on semantic application of UI and proper layout of websites. In
       her free time she designs code snippets to test her UI abilities and
-      expand them. Previous to attending Make School she graduated in a BS
-      Electronics Engineering where she discovered her true passion for
-      programming by building an autonomous robot and programming it to follow a
-      person based on an specific color as well as programming a robotic arm for
-      her thesis.`}
+      expand them.`}
+      </p>
+      <p className="bio__third--paragraph" data-test-bio-third-paragraph>
+        She graduated as a BS Electronics Engineer where she discovered her
+        passion for programming by building an autonomous robot and programming
+        it to follow a person based on an specific color being held by the
+        person to follow; as well as, programming a robotic arm for her thesis.
       </p>
     </section>
     <section className="bio__secondary--info" data-test-bio-secondary-info>

@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './components/header';
 import ProjectsContainer from './components/home/projects-container';
 import Project from './components/project/individual-project';
+import BlogDashboard from './components/blogs/blog-dashboard';
 import BioContainer from './components/about/about-me';
 import Footer from './components/footer';
 
@@ -14,6 +15,7 @@ function App() {
         <Redirect from="/projects" to="/" />
         <Route path="/" exact component={ProjectsContainer} />
         <Route path="/projects/:id" component={Project} />
+        <Route path="/blogs" exact component={BlogDashboard} />
         <Route path="/about" component={BioContainer} />
       </Switch>
       <Footer />

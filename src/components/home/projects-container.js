@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 import React, { Component } from 'react';
 import Carousel from './carousel-container';
 import BottomButtonsSlider from './bottom-buttons';
@@ -39,6 +40,13 @@ class ProjectsContainer extends Component {
 
     return (
       <main className="projects__main-container" data-test-project-container>
+        <section
+          className="welcome__section--message"
+          data-test-welcome-message-section
+        >
+          <h1>{"Welcome to Julie's Portfolio"}</h1>
+          <h4>I am a Frontend Engineer </h4>
+        </section>
         <Carousel pixelsToMove={pixelsToMove}>{Images()}</Carousel>
         <BottomButtonsSlider
           activeButton={activeImageIdx}

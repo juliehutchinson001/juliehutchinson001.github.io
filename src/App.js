@@ -7,6 +7,7 @@ import BlogDashboard from './components/blogs/blog-dashboard';
 import Blog from './components/blogs/blog';
 import BioContainer from './components/about/about-me';
 import Footer from './components/footer';
+import NotFound from './components/helpers/not-found';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/blogs" exact component={BlogDashboard} />
         <Route path="/blogs/:id" component={Blog} />
         <Route path="/about" component={BioContainer} />
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </div>

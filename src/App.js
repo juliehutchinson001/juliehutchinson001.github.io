@@ -9,7 +9,7 @@ import BioContainer from './components/about/about-me';
 import Footer from './components/footer';
 import NotFound from './components/helpers/not-found';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
@@ -25,6 +25,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

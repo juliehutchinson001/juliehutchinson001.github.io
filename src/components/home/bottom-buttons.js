@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import imgUrls from '../helpers/images-info';
 
 const BottomButtonsSlider = ({ activeButton, children, slideTo }) => {
-  const multipleButtons = imgUrls.map((ima, idx) => (
+  const multipleButtons = imgUrls.map((image, idx) => (
     <button
       type="button"
       className={activeButton === idx ? 'button-act' : 'button-no-act'}
-      key={`${ima.url}idx`}
+      key={`${image.pictureUrl}idx`}
       data-test-slider-buttons-bottom
       onClick={() => slideTo(idx)}
     />

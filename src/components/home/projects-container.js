@@ -2,11 +2,8 @@
 import React, { Component } from 'react';
 import Carousel from './carousel-container';
 import BottomButtonsSlider from './bottom-buttons';
-import Images from '../project/project-list';
 import Arrow from './carousel-arrows';
-
 import isWithinBoundry from '../helpers/is-index-within';
-// import PropTypes from 'prop-types';
 
 class ProjectsContainer extends Component {
   constructor(props) {
@@ -47,7 +44,7 @@ class ProjectsContainer extends Component {
           <h1>{"Welcome to Julie's Portfolio"}</h1>
           <h4>I am a Frontend Engineer </h4>
         </section>
-        <Carousel pixelsToMove={pixelsToMove}>{Images()}</Carousel>
+        <Carousel pixelsToMove={pixelsToMove} />
         <BottomButtonsSlider
           activeButton={activeImageIdx}
           slideTo={idx => this.slideTo(idx)}

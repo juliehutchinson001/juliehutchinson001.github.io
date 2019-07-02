@@ -1,39 +1,38 @@
-import React from 'react';
-import { Link, Route } from 'react-router-dom';
-import IndividualProject from './individual-project';
+import React, { Fragment } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import imgUrls from '../helpers/images-info';
+import slugify from '../helpers/slugify';
 
-const Images = () => {
-  const allImages = imgUrls.map(eachImg => (
-    <div key={eachImg.projectName} data-test-carousel-slide-project-wrapper>
+const Images = ({ match }) => {
+  const allImages = imgUrls.map(({ projectName, pictureUrl }) => (
+    <div key={projectName} data-test-carousel-slide-project-wrapper>
       <h1
         className="carousel__slide--project-header"
         data-test-carousel-slide-project-header
       >
-        {eachImg.projectName}
+        {projectName}
       </h1>
       <Link
         className="carousel__slide--thumbnail-link"
-        to={`/projects/${eachImg.sluggedName}`}
+        to={`${match.url}/${slugify(projectName)}`}
         data-test-carousel-slide-link
       >
         <img
           className="carousel__slide-image"
           data-test-carousel-slide-image
-          src={eachImg.url}
-          alt={eachImg.url}
+          src={pictureUrl}
+          alt={pictureUrl}
         />
       </Link>
-      <Route
-        data-test-carousel-route-link
-        path="/"
-        component={IndividualProject}
-      />
     </div>
   ));
-  return allImages;
-
-  // <Route path={`${match.path}/:topicId`} component={<div>{'IndividualProject'}</div>
+  return <Fragment>{allImages}</Fragment>;
 };
 
-export default Images;
+Images.propTypes = {
+  match: PropTypes.objectOf([PropTypes.string]).isRequired,
+};
+
+// export default withRouter(Images);
+export default withRouter(Images);

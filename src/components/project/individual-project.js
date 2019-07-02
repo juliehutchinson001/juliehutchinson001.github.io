@@ -1,19 +1,27 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import imgUrls from '../helpers/images-info';
+import slugify from '../helpers/slugify';
 
-const Project = () => (
-  <section className="carousel__outer-wrapper" data-test-carousel-outer-wrapper>
-    this is one project
-  </section>
-);
+const Project = ({ match }) => {
+  const { id } = match.params;
+  const project = imgUrls.find(
+    eachProject => slugify(eachProject.projectName) === id
+  );
+  return (
+    <section
+      className="carousel__outer-wrapper"
+      data-test-carousel-outer-wrapper
+    >
+      <p>{project.projectName}</p>
+      <p>{project.description}</p>
+    </section>
+  );
+};
 
-// Project.propTypes = {
-//   children: PropTypes.oneOfType([
-//     PropTypes.func,
-//     PropTypes.element,
-//     PropTypes.node,
-//   ]).isRequired,
-//   pixelsToMove: PropTypes.number.isRequired,
-// };
+Project.propTypes = {
+  match: PropTypes.objectOf(PropTypes.bool).isRequired,
+};
 
-export default Project;
+export default withRouter(Project);

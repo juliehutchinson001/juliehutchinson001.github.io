@@ -41,7 +41,7 @@ class ProjectsContainer extends Component {
           className="welcome__section--message"
           data-test-welcome-message-section
         >
-          <h1>{"Welcome to Julie's Portfolio"}</h1>
+          <h1>Welcome to Julie&#x2019;s Portfolio</h1>
           <h4>I am a Frontend Engineer </h4>
         </section>
         <Carousel pixelsToMove={pixelsToMove} />

@@ -34,5 +34,4 @@ Images.propTypes = {
   match: PropTypes.objectOf([PropTypes.string]).isRequired,
 };
 
-// export default withRouter(Images);
 export default withRouter(Images);

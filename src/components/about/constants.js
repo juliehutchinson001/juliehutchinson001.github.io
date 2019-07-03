@@ -1,6 +1,6 @@
 const skills = [
   {
-    section: 'frontend',
+    section: 'Frontend',
     description:
       'React, JavaScript, DOM manipulation, HTML5, React router, ES6-ES9, Redux, AJAX, jQuery',
   },
@@ -18,7 +18,7 @@ const skills = [
     description: 'Git/GitHub collaboration, Unix/Linux Command Line',
   },
   {
-    section: 'backend',
+    section: 'Backend',
     description: 'MongoDB (Mongoose), Node.js, Express.js, RESTful Routes',
   },
 ];

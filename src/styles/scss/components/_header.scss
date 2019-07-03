@@ -17,8 +17,7 @@
 
 .navigation__list--home-links {
   @include reset-list;
-  margin-right: auto;
-  margin-left: 1rem;
+  margin: 0 auto 0 1rem;
 }
 
 .navigation__link--home {
@@ -29,9 +28,9 @@
   display: flex;
   align-items: center;
 
-  // font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
+  letter-spacing: 1.5px;
 }
 
 .navigation__image-link--home {
@@ -44,7 +43,6 @@
   border-radius: 1rem;
 
   margin-right: 0.5rem;
-  letter-spacing: 1.5px;
 }
 
 .navigation__list--links {
@@ -73,10 +71,45 @@
   padding-bottom: 20px;
 }
 
+@media screen and (min-width: 450px) {
+  .navigation__top {
+    font-size: 0.9rem;
+  }
+
+  .navigation__image-link--home {
+    margin-right: 0.8rem;
+  }
+
+  .navigation__list--links {
+    margin-right: 1.2rem;
+  }
+
+  .navigation__link {
+    font-weight: 400;
+  }
+
+  .active-section {
+    font-weight: 800;
+  }
+
+}
+
 @media screen and (min-width: 768px) {
   .navigation__top {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
+  }
+
+  .navigation__image-link--home {
+    margin-left: 7rem;
+  }
+
+  .navigation__list--links {
+    margin-right: 2rem;
+  }
+
+  .about {
+    margin-right: 7rem;
   }
 
 }

@@ -46,7 +46,7 @@ const Header = () => {
           </NavLink>
         </li>
         <li
-          className="navigation__list--links"
+          className="navigation__list--links about"
           data-test-navigation-about-link-wrapper
         >
           <NavLink

@@ -6,7 +6,7 @@ import BlogDashboard from './components/blogs/blog-dashboard';
 import Blog from './components/blogs/blog';
 import BioContainer from './components/about/about-me';
 import Footer from './components/footer';
-import NotFound from './components/helpers/not-found';
+import NotFound from './components/not-found';
 import singleProject from './components/project/individual-project';
 
 const App = () => {

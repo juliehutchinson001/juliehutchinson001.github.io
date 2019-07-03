@@ -1,7 +1,3 @@
-/* eslint-disable no-param-reassign */
-
-let slugifiedName;
-
 const blogs = [
   {
     name: 'First Blog',

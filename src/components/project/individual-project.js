@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import imgUrls from '../helpers/images-info';
+import imgUrls from './constants';
 import slugify from '../helpers/slugify';
 
 const Project = ({ match }) => {

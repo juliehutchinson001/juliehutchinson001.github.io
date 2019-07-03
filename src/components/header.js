@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import julie from '../styles/assets/images/julie_final.jpg';
 
 const Header = () => {
@@ -10,10 +10,12 @@ const Header = () => {
           className="navigation__list--home-links"
           data-test-navigation-home-link-wrapper
         >
-          <Link
+          <NavLink
             to="/"
             className="navigation__link--home"
             data-test-navigation-home-link
+            activeClassName="active-section"
+            exact
           >
             <img
               src={`${julie}`}
@@ -27,31 +29,34 @@ const Header = () => {
             >
               Julie Hutchinson
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li
           className="navigation__list--links"
           data-test-navigation-blogs-link-wrapper
         >
-          <Link
+          <NavLink
             to="/blogs"
+            exact
             className="navigation__link"
             data-test-navigation-blogs-link
+            activeClassName="active-section"
           >
             BLOGS
-          </Link>
+          </NavLink>
         </li>
         <li
           className="navigation__list--links"
           data-test-navigation-about-link-wrapper
         >
-          <Link
+          <NavLink
             to="/about"
             className="navigation__link"
             data-test-navigation-about-link
+            activeClassName="active-section"
           >
             ABOUT
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

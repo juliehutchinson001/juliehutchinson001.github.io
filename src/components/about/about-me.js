@@ -1,5 +1,5 @@
 import React from 'react';
-import skills from '../helpers/skills-info';
+import skills from './constants';
 
 const Skills = () => {
   const allSkills = skills.map(skillInfo => {
@@ -38,10 +38,10 @@ const BioContainer = () => (
         company.
       </p>
       <p className="bio__second--paragraph" data-test-bio-second-paragraph>
-        {`Julie's greatest interests from the moment she relocated are
-      focused on semantic application of UI and proper layout of websites. In
-      her free time she designs code snippets to test her UI skillset and
-      expand them.`}
+        Julie&#x2019;s greatest interests from the moment she relocated are
+        focused on semantic application of UI and proper layout of websites. In
+        her free time she designs code snippets to test her UI skillset and
+        expand them.
       </p>
       <p className="bio__third--paragraph" data-test-bio-third-paragraph>
         Julie graduated from her BS in Electronics Engineering, where she

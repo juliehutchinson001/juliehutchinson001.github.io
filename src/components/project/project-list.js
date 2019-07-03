@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import imgUrls from '../helpers/images-info';
+import imgUrls from './constants';
 import slugify from '../helpers/slugify';
 
 const Images = ({ match }) => {

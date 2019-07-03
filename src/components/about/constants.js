@@ -11,7 +11,7 @@ const skills = [
   },
   {
     section: 'Computer Science',
-    description: 'OOP Fundamentals, Data Structures, Algorithms, Markov Chain',
+    description: 'OOP Fundamentals, Data Structures, Algorithms',
   },
   {
     section: 'Version Control / Unix',

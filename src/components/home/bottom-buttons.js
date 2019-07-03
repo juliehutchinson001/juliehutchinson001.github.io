@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import imgUrls from '../helpers/images-info';
+import imgUrls from '../project/constants';
 
 const BottomButtonsSlider = ({ activeButton, children, slideTo }) => {
   const multipleButtons = imgUrls.map((image, idx) => (

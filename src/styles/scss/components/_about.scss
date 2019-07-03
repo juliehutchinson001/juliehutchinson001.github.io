@@ -2,6 +2,8 @@
   background-color: $darkest-blue;
   color: $lightest-grey;
 
+  min-height: 800px;
+
   @include display-flex;
   flex-direction: column;
   justify-content: center;
@@ -13,29 +15,30 @@
   @include display-flex;
   flex-direction: column;
   justify-content: center;
+  background: linear-gradient($lightest-grey, #F2F2FF);
+  color: $darkest-blue;
+  width: 95%;
 }
 
 .bio__header {
-  text-align: center;
-}
-
-.bio__first--paragraph,
-.bio__second--paragraph,
-.bio__third--paragraph {
-  text-align: justify;
-  margin: 1rem 1.8rem;
+  margin: 0;
+  width: $w-full;
 }
 
 .bio__secondary--info {
   width: $w-full;
-}
-
-.bio__subheader {
-  margin: 1rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bio__list-of-skills {
-  margin: 1rem 1.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.bio-skill {
+  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -43,11 +46,64 @@
     font-size: 1.5rem;
   }
 
-  .bio__intro-container, .bio__secondary--info {
+
+  .bio__intro-container {
+    line-height: 1.6;
+    width: $w-full;
+  }
+
+  .bio__header {
+    margin-top: 25px;
+    font-size: 48px;
+    width: 70%;
+    max-width: 1024px;
+  }
+
+  .bio__first--paragraph,
+  .bio__second--paragraph,
+  .bio__third--paragraph, .bio__list-of-skills {
     width: 70%;
     max-width: 1024px;
 
-    line-height: 2;
+  }
+
+  .bio__third--paragraph {
+    margin-bottom: 50px;
+  }
+
+  .bio__secondary--info {
+    width: 100%;
+    line-height: 1.6;
+  }
+
+  .bio__subheader {
+    width: 70%;
+    max-width: 1024px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #84CEC7;
+  }
+
+  .bio__list-of-skills {
+    padding: 0;
+    margin: 0;
+  }
+
+  .bio-skill {
+    margin-bottom: 10px;
+    color: #D0F1FD;
+    display: flex;
+  }
+
+  .bio-skill__header {
+    color: #F2F5F8;
+    width: 30%;
+    font-size: 24px;
+  }
+
+  .bio-skill__content {
+    width: 69%;
+    color: #9DB5BE;
   }
 }
 

@@ -8,7 +8,7 @@ const Skills = () => {
       ? 'bio-skill__header terminal'
       : 'bio-skill__header';
     return (
-      <li className="bio-skill" data-test-bio-skill>
+      <li key={`${description}`} className="bio-skill" data-test-bio-skill>
         <h3 className={bioClass}>{section}</h3>
         <p className="bio-skill__content">{description}</p>
       </li>

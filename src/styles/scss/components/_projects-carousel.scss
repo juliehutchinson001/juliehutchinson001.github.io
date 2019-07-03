@@ -1,9 +1,15 @@
 .projects__main-container {
   color: $lightest-grey;
 
+  min-height: 800px;
+
   justify-content: center;
   @include display-flex;
   flex-direction: column;
+}
+
+.welcome__section--message {
+  color: $darkest-blue;
 }
 
 /* Carousel Component */
@@ -93,25 +99,27 @@
 .button-act {
   background-color: $dark-blue;
 
-  height: 5px;
-  width: 40px;
+  height: $seven-pixels;
+  width: $seven-pixels;
 
   border: 1px solid $dark-blue;
-  border-radius: 20px;
+  border-radius: $seven-pixels;
 
-  margin-right: 5px;
+  margin-right: $seven-pixels;
+  padding: 0;
 }
 
 .button-no-act {
   background-color: transparent;
 
-  height: 5px;
-  width: 40px;
+  height: $seven-pixels;
+  width: $seven-pixels;
 
   border: 1px solid $dark-blue;
-  border-radius: 20px;
+  border-radius: $seven-pixels;
 
-  margin-right: 5px;
+  margin-right: $seven-pixels;
+  padding: 0;
 }
 
 .slider__nav--dots {
@@ -119,4 +127,6 @@
   @include display-flex;
   justify-content: center;
 }
+
+
 

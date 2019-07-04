@@ -2,21 +2,15 @@
   background-color: $darkest-blue;
   color: $lightest-grey;
 
-  height: 100px;
+  height: $component-height;
   width: $w-full;
 
   @include display-flex;
   justify-content: flex-end;
 }
 
-.footer__additional-info {
-  width: 100px;
-
-  margin: 0 auto 0 7rem;
-}
-
 .footer__contact-link {
-  color: #84CEC7;
+  color: $links-color;
   letter-spacing: 2px;
 
   margin-right: 2rem;
@@ -24,6 +18,8 @@
   text-decoration: none;
 }
 
-.linkedin {
-  margin-right: 5rem;
+@media screen and (min-width: 768px) {
+  .linkedin {
+    margin-right: 7rem;
+  }
 }

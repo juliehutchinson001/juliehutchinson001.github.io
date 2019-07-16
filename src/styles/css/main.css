@@ -5,12 +5,15 @@
 /* Typography */
 .navigation__top {
   background-color: #191E38;
-  height: 200px;
+  height: 100px;
   width: 100%;
   font-size: 0.7rem; }
 
+.navigation__link-home--text {
+  font-style: italic; }
+
 .navigation__list {
-  height: 200px;
+  height: 100px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -86,7 +89,10 @@
     margin-right: 2rem; }
 
   .about {
-    margin-right: 7rem; } }
+    margin-right: 7rem; }
+
+  .welcome__section--subheader-message {
+    font-size: 24px; } }
 html {
   min-height: 100vh;
   min-width: 100vw; }
@@ -105,11 +111,6 @@ body {
   font-family: "Muli", sans-serif;
   font-size: 14px; }
 
-/* Temporary */
-img {
-  width: 200px;
-  height: 200px; }
-
 .portfolio__footer {
   background-color: #191E38;
   color: #F2F5F8;
@@ -119,29 +120,41 @@ img {
   align-items: center;
   justify-content: flex-end; }
 
-.footer__additional-info {
-  width: 100px;
-  margin: 0 auto 0 7rem; }
-
 .footer__contact-link {
   color: #84CEC7;
   letter-spacing: 2px;
   margin-right: 2rem;
   text-decoration: none; }
 
-.linkedin {
-  margin-right: 5rem; }
-
+@media screen and (min-width: 768px) {
+  .linkedin {
+    margin-right: 7rem; } }
 .projects__main-container {
   color: #F2F5F8;
-  min-height: 800px;
   justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: column; }
 
 .welcome__section--message {
-  color: #191E38; }
+  color: #191E38;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(#191e38, #202647); }
+
+.welcome__section--header-message {
+  font-size: 46px;
+  font-weight: 300;
+  color: #F2F5F8; }
+
+.welcome__section--subheader-message {
+  font-size: 16px;
+  color: #84CEC7;
+  font-weight: 300; }
 
 /* Carousel Component */
 .carousel__outer-wrapper {

@@ -42,6 +42,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .terminal {
+    max-width: 190px;
+    margin-right: 60px;
+  }
+
   .bio__main-container {
     font-size: 1.5rem;
   }
@@ -81,7 +86,7 @@
     max-width: 1024px;
     font-weight: 600;
     font-size: 32px;
-    color: #84CEC7;
+    color: $light-blue;
   }
 
   .bio__list-of-skills {
@@ -91,12 +96,12 @@
 
   .bio-skill {
     margin-bottom: 10px;
-    color: #D0F1FD;
+    color: $lightest-blue;
     display: flex;
   }
 
   .bio-skill__header {
-    color: #F2F5F8;
+    color: $lightest-grey;
     width: 30%;
     font-size: 24px;
   }

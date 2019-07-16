@@ -7,6 +7,10 @@
   font-size: 0.7rem;
 }
 
+.navigation__link-home--text {
+  font-style: italic;
+}
+
 .navigation__list {
   height: $component-height;
   margin: 0;
@@ -110,6 +114,10 @@
 
   .about {
     margin-right: 7rem;
+  }
+
+  .welcome__section--subheader-message {
+    font-size: 24px;
   }
 
 }

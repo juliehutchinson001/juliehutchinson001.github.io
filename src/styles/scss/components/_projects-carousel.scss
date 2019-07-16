@@ -1,8 +1,6 @@
 .projects__main-container {
   color: $lightest-grey;
 
-  min-height: 800px;
-
   justify-content: center;
   @include display-flex;
   flex-direction: column;
@@ -10,6 +8,24 @@
 
 .welcome__section--message {
   color: $darkest-blue;
+  height: 300px;
+  width: $w-full;
+  @include display-flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgb(25, 30, 56), rgb(32, 38, 71));
+}
+
+.welcome__section--header-message {
+  font-size: 46px;
+  font-weight: 300;
+  color: $lightest-grey;
+}
+
+.welcome__section--subheader-message {
+  font-size: 16px;
+  color: $light-blue;
+  font-weight: 300;
 }
 
 /* Carousel Component */

@@ -18,6 +18,12 @@ const BottomButtonsSlider = ({ activeButton, children, slideTo }) => {
       className="slider__buttons-container--bottom"
     >
       {children}
+      <small
+        className="legend__additional-info"
+        data-test-legend-additional-info
+      >
+        Click on the image for project details
+      </small>
       <div className="slider__nav--dots">{multipleButtons}</div>
     </section>
   );

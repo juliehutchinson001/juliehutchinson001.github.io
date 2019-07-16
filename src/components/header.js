@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import julie from '../styles/assets/images/julie_final.jpg';
 
-const Header = () => {
+const Header = ({ location }) => {
   return (
     <nav className="navigation__top" data-test-navigation-container>
       <ul className="navigation__list" data-test-navigation-list>
@@ -27,7 +28,7 @@ const Header = () => {
               className="navigation__link-home--text"
               data-test-navigation-home-link-text
             >
-              Julie Hutchinson
+              {location.pathname !== '/projects' ? 'Home' : 'JH'}
             </span>
           </NavLink>
         </li>
@@ -42,7 +43,7 @@ const Header = () => {
             data-test-navigation-blogs-link
             activeClassName="active-section"
           >
-            BLOGS
+            BLOG
           </NavLink>
         </li>
         <li
@@ -63,4 +64,8 @@ const Header = () => {
   );
 };
 
-export default Header;
+Header.propTypes = {
+  location: PropTypes.objectOf(PropTypes.string).isRequired,
+};
+
+export default withRouter(Header);

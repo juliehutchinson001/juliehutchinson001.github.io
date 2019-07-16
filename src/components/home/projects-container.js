@@ -41,8 +41,18 @@ class ProjectsContainer extends Component {
           className="welcome__section--message"
           data-test-welcome-message-section
         >
-          <h1>Welcome to Julie&#x2019;s Portfolio</h1>
-          <h4>I am a Frontend Engineer </h4>
+          <h1
+            className="welcome__section--header-message"
+            data-test-welcome-header-message-section
+          >
+            JULIE HUTCHINSON&#x2019;S SITE
+          </h1>
+          <h4
+            className="welcome__section--subheader-message"
+            data-test-welcome-subjeader-message-section
+          >
+            I am a Frontend Engineer at the Bay Area
+          </h4>
         </section>
         <Carousel pixelsToMove={pixelsToMove} />
         <BottomButtonsSlider

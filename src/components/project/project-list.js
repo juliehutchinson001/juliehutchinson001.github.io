@@ -31,7 +31,10 @@ const Images = ({ match }) => {
 };
 
 Images.propTypes = {
-  match: PropTypes.objectOf([PropTypes.string]).isRequired,
+  match: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+    isExact: PropTypes.bool.isRequired,
+  }).isRequired,
 };
 
 export default withRouter(Images);

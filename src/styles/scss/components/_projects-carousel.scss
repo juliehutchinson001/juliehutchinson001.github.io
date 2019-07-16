@@ -36,6 +36,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  height: 392px;
 }
 
 .carousel__inner-wrapper {
@@ -43,9 +44,6 @@
 
   height: $h-full;
   width: $w-full;
-
-  @include display-flex;
-  justify-content: flex-start;
 
 }
 

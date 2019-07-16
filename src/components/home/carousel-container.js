@@ -5,7 +5,7 @@ import Images from '../project/project-list';
 const Carousel = ({ pixelsToMove }) => (
   <section className="carousel__outer-wrapper" data-test-carousel-outer-wrapper>
     <div
-      style={{ transform: `translateX(${pixelsToMove}px)` }}
+      style={{ transform: `translateY(${pixelsToMove}px)` }}
       className="carousel__inner-wrapper"
       data-test-carousel-inner-wrapper
     >

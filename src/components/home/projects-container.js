@@ -9,7 +9,7 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.widthImage = 300;
+    this.imageHeight = 392;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
@@ -17,7 +17,7 @@ class ProjectsContainer extends Component {
   }
 
   slideTo(idx) {
-    const pixelsToMove = idx * this.widthImage * -1;
+    const pixelsToMove = idx * this.imageHeight * -1;
     this.setState({ pixelsToMove, activeImageIdx: idx });
   }
 
@@ -27,7 +27,7 @@ class ProjectsContainer extends Component {
     const nextIdx = isGoingNext ? activeImageIdx + 1 : activeImageIdx - 1;
 
     if (isWithinBoundry(nextIdx)) {
-      const pixelsToMove = nextIdx * this.widthImage * -1;
+      const pixelsToMove = nextIdx * this.imageHeight * -1;
       this.setState({ pixelsToMove, activeImageIdx: nextIdx });
     }
   }

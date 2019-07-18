@@ -28,15 +28,21 @@
   font-weight: 300;
 }
 
+.carousels__wrapper {
+  @include display-flex;
+  margin: 35px;
+  justify-content: center;
+}
+
 /* Carousel Component */
 
 .carousel__outer-wrapper {
-  width: 300px;
+  width: 500px;
 
   display: flex;
   justify-content: center;
   overflow: hidden;
-  height: 392px;
+  height: 500px;
 }
 
 .carousel__inner-wrapper {
@@ -50,25 +56,37 @@
 /* Images Component */
 
 .carousel__slide-container--thumbnail {
-  height: 300px;
-
-  @include reset-list;
+  height: 500px;
 }
 
 .carousel__slide-image {
-  height: 300px;
-  width: 300px;
+  height: 500px;
+  width: 500px;
 }
 
 .carousel__slide--project-header {
   color: $darkest-blue;
   border: 0;
 
-  width: $w-full;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  margin: 0;
   font-size: 30px;
   font-weight: 800;
 }
+
+.carousel__header-container {
+  transform: translateY(-2500px);
+}
+
+/* ProjectTitles Component */
+
+.carousel__slide--header-link {
+  text-decoration: none;
+}
+
 
 /* Arrows Component */
 

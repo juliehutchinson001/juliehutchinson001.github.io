@@ -4,12 +4,13 @@ import Carousel from './carousel-container';
 import BottomButtonsSlider from './bottom-buttons';
 import Arrow from './carousel-arrows';
 import isWithinBoundry from '../helpers/is-index-within';
+import Images, { ProjectTitles } from '../project/project-list';
 
 class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.imageHeight = 392;
+    this.imageHeight = 500;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
@@ -51,10 +52,19 @@ class ProjectsContainer extends Component {
             className="welcome__section--subheader-message"
             data-test-welcome-subjeader-message-section
           >
-            I am a Frontend Engineer at the Bay Area
+            I am a Software Engineer in California
           </h4>
         </section>
-        <Carousel pixelsToMove={pixelsToMove} />
+
+        <div className="carousels__wrapper" data-test-carousels-wrapper>
+          <Carousel pixelsToMove={pixelsToMove} direction="up">
+            <Images />
+          </Carousel>
+          <Carousel pixelsToMove={pixelsToMove} direction="down">
+            <ProjectTitles />
+          </Carousel>
+        </div>
+
         <BottomButtonsSlider
           activeButton={activeImageIdx}
           slideTo={idx => this.slideTo(idx)}

@@ -6,13 +6,11 @@ import slugify from '../helpers/slugify';
 
 const Images = ({ match }) => {
   const allImages = imgUrls.map(({ projectName, pictureUrl }) => (
-    <div key={projectName} data-test-carousel-slide-project-wrapper>
-      <h1
-        className="carousel__slide--project-header"
-        data-test-carousel-slide-project-header
-      >
-        {projectName}
-      </h1>
+    <div
+      key={projectName}
+      className="carousel__slide-container--thumbnail"
+      data-test-carousel-slide-project-wrapper
+    >
       <Link
         className="carousel__slide--thumbnail-link"
         to={`${match.url}/${slugify(projectName)}`}
@@ -29,6 +27,28 @@ const Images = ({ match }) => {
   ));
   return <Fragment>{allImages}</Fragment>;
 };
+
+export const ProjectTitles = withRouter(({ match }) => {
+  const allImages = [];
+  for (let i = imgUrls.length - 1; i > -1; i -= 1) {
+    allImages.push(
+      <Link
+        className="carousel__slide--header-link"
+        key={imgUrls[i].projectName}
+        to={`${match.url}/${slugify(imgUrls[i].projectName)}`}
+        data-test-carousel-slide-header-link
+      >
+        <h1
+          className="carousel__slide--project-header"
+          data-test-carousel-slide-project-header
+        >
+          {imgUrls[i].projectName}
+        </h1>
+      </Link>
+    );
+  }
+  return <div className="carousel__header-container">{allImages}</div>;
+});
 
 Images.propTypes = {
   match: PropTypes.shape({

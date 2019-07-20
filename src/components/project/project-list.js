@@ -6,24 +6,19 @@ import slugify from '../helpers/slugify';
 
 const Images = ({ match }) => {
   const allImages = imgUrls.map(({ projectName, pictureUrl }) => (
-    <div
+    <Link
       key={projectName}
-      className="carousel__slide-container--thumbnail"
-      data-test-carousel-slide-project-wrapper
+      className="carousel__slide--thumbnail-link"
+      to={`${match.url}/${slugify(projectName)}`}
+      data-test-carousel-slide-link
     >
-      <Link
-        className="carousel__slide--thumbnail-link"
-        to={`${match.url}/${slugify(projectName)}`}
-        data-test-carousel-slide-link
-      >
-        <img
-          className="carousel__slide-image"
-          data-test-carousel-slide-image
-          src={pictureUrl}
-          alt={pictureUrl}
-        />
-      </Link>
-    </div>
+      <img
+        className="carousel__slide-image"
+        data-test-carousel-slide-image
+        src={pictureUrl}
+        alt={pictureUrl}
+      />
+    </Link>
   ));
   return <Fragment>{allImages}</Fragment>;
 };

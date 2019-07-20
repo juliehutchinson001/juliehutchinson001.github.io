@@ -10,16 +10,19 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.imageHeight = 500;
+    this.imageHeight = window.innerHeight > 767 ? 500 : 300;
+    this.imageHeightTitle = window.innerHeight > 767 ? 500 : 100;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
+      pixelsToMoveTitle: 0,
     };
   }
 
   slideTo(idx) {
     const pixelsToMove = idx * this.imageHeight * -1;
-    this.setState({ pixelsToMove, activeImageIdx: idx });
+    const pixelsToMoveTitle = idx * this.imageHeightTitle * -1;
+    this.setState({ pixelsToMove, activeImageIdx: idx, pixelsToMoveTitle });
   }
 
   goToImage(direction) {
@@ -29,12 +32,17 @@ class ProjectsContainer extends Component {
 
     if (isWithinBoundry(nextIdx)) {
       const pixelsToMove = nextIdx * this.imageHeight * -1;
-      this.setState({ pixelsToMove, activeImageIdx: nextIdx });
+      const pixelsToMoveTitle = nextIdx * this.imageHeightTitle * -1;
+      this.setState({
+        pixelsToMove,
+        activeImageIdx: nextIdx,
+        pixelsToMoveTitle,
+      });
     }
   }
 
   render() {
-    const { activeImageIdx, pixelsToMove } = this.state;
+    const { activeImageIdx, pixelsToMove, pixelsToMoveTitle } = this.state;
 
     return (
       <main className="projects__main-container" data-test-project-container>
@@ -57,11 +65,11 @@ class ProjectsContainer extends Component {
         </section>
 
         <div className="carousels__wrapper" data-test-carousels-wrapper>
+          <Carousel pixelsToMove={pixelsToMoveTitle} direction="down">
+            <ProjectTitles />
+          </Carousel>
           <Carousel pixelsToMove={pixelsToMove} direction="up">
             <Images />
-          </Carousel>
-          <Carousel pixelsToMove={pixelsToMove} direction="down">
-            <ProjectTitles />
           </Carousel>
         </div>
 

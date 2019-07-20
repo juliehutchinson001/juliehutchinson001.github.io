@@ -7,13 +7,15 @@
 }
 
 .welcome__section--message {
-  color: $darkest-blue;
   height: 300px;
   width: $w-full;
+
   @include display-flex;
   flex-direction: column;
   justify-content: center;
+
   background-image: linear-gradient(rgb(25, 30, 56), rgb(32, 38, 71));
+  color: $darkest-blue;
 }
 
 .welcome__section--header-message {
@@ -38,11 +40,11 @@
 
 .carousel__outer-wrapper {
   width: 500px;
+  height: 500px;
 
   display: flex;
   justify-content: center;
   overflow: hidden;
-  height: 500px;
 }
 
 .carousel__inner-wrapper {
@@ -50,12 +52,11 @@
 
   height: $h-full;
   width: $w-full;
-
 }
 
 /* Images Component */
 
-.carousel__slide-container--thumbnail {
+.carousel__slide--thumbnail-link {
   height: 500px;
 }
 
@@ -66,13 +67,16 @@
 
 .carousel__slide--project-header {
   color: $darkest-blue;
-  border: 0;
+
+  height: 500px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
   margin: 0;
+
+  border: 0;
+
   font-size: 30px;
   font-weight: 800;
 }
@@ -160,5 +164,8 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 767px) {
 
+
+}
 

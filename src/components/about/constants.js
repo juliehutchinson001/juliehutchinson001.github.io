@@ -2,24 +2,24 @@ const skills = [
   {
     section: 'Frontend',
     description:
-      'React, JavaScript, DOM manipulation, HTML5, React router, ES6-ES9, Redux, AJAX, jQuery',
+      'React, JavaScript, DOM manipulation, HTML5, React router, ES6-ES9, Redux, AJAX, jQuery.',
   },
   {
-    section: 'CSS / Design',
+    section: 'CSS / UI',
     description:
-      'CSS3, Sass, BEM, Semantic UI, CSS in JS (Aphrodite), Tailwind, Bootstrap',
+      'CSS3, Sass, BEM, Semantic UI, CSS in JS (Aphrodite), Tailwind, Bootstrap.',
   },
   {
     section: 'Computer Science',
-    description: 'OOP Fundamentals, Data Structures, Algorithms',
+    description: 'OOP Fundamentals, Data Structures, Algorithms.',
   },
   {
-    section: 'Version Control / Unix',
-    description: 'Git/GitHub collaboration, Unix/Linux Command Line',
+    section: `Version Control${'\n'}Unix`,
+    description: 'Git/GitHub collaboration, Unix/Linux, Command Line, VIM.',
   },
   {
     section: 'Backend',
-    description: 'MongoDB (Mongoose), Node.js, Express.js, RESTful Routes',
+    description: 'MongoDB (Mongoose), Node.js, Express.js, RESTful Routes.',
   },
 ];
 

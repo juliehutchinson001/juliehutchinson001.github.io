@@ -29,7 +29,7 @@ const Header = ({ location }) => {
                 className="navigation__link-home--text"
                 data-test-navigation-home-link-text
               >
-                {location.pathname !== '/projects' ? 'Home' : 'JH'}
+                JH
               </span>
             </NavLink>
           </li>

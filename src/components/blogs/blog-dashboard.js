@@ -3,9 +3,12 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import slugify from '../helpers/slugify';
 import blogs from './constants';
+import ComingSoonSVG from '../../styles/assets/images/coming-soon';
 
 const BlogDashboard = ({ match }) => {
-  const allBlogs = blogs.map(({ blogName, blogAbstract }) => (
+  {
+    /*
+    const allBlogs = blogs.map(({ blogName, blogAbstract }) => (
     <li
       key={blogName}
       className="individual-blog__section--wrapper"
@@ -47,6 +50,15 @@ const BlogDashboard = ({ match }) => {
         {allBlogs}
       </ul>
     </main>
+  );
+   */
+  }
+
+  return (
+    <div className="main-blog__section">
+      <ComingSoonSVG />
+      <p className="main-blog__section-header">Coming soon</p>
+    </div>
   );
 };
 

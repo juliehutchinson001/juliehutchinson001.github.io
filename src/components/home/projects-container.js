@@ -10,13 +10,18 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.imageHeight = window.innerHeight > 767 ? 661 : 300;
-    this.imageHeightTitle = window.innerHeight > 767 ? 661 : 100;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
       pixelsToMoveTitle: 0,
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      this.imageHeight = window.innerHeight > 767 ? 600 : 300;
+      this.imageHeightTitle = window.innerHeight > 767 ? 600 : 100;
+    });
   }
 
   slideTo(idx) {

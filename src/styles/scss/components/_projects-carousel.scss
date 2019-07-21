@@ -13,7 +13,7 @@
   justify-content: center;
 
   width: 95vw;
-  height: 95%;
+  height: 600px;
 }
 
 /* Carousel Component */
@@ -37,7 +37,7 @@
 /* Images Component */
 
 .carousel__slide--thumbnail-link {
-  height: 661px;
+  height: 600px;
   display: block;
 }
 
@@ -49,7 +49,7 @@
 .carousel__slide--project-header {
   color: $darkest-blue;
 
-  height: 661px;
+  height: 600px;
 
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@
 }
 
 .carousel__header-container {
-  transform: translateY(-3305px);
+  transform: translateY(-3000px);
 }
 
 /* ProjectTitles Component */

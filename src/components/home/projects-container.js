@@ -10,8 +10,8 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.imageHeight = window.innerHeight > 767 ? 500 : 300;
-    this.imageHeightTitle = window.innerHeight > 767 ? 500 : 100;
+    this.imageHeight = window.innerHeight > 767 ? 661 : 300;
+    this.imageHeightTitle = window.innerHeight > 767 ? 661 : 100;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
@@ -46,24 +46,6 @@ class ProjectsContainer extends Component {
 
     return (
       <main className="projects__main-container" data-test-project-container>
-        <section
-          className="welcome__section--message"
-          data-test-welcome-message-section
-        >
-          <h1
-            className="welcome__section--header-message"
-            data-test-welcome-header-message-section
-          >
-            JULIE HUTCHINSON&#x2019;S SITE
-          </h1>
-          <h4
-            className="welcome__section--subheader-message"
-            data-test-welcome-subjeader-message-section
-          >
-            I am a Software Engineer in California
-          </h4>
-        </section>
-
         <div className="carousels__wrapper" data-test-carousels-wrapper>
           <Carousel pixelsToMove={pixelsToMoveTitle} direction="down">
             <ProjectTitles />

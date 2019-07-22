@@ -4,21 +4,25 @@ import Carousel from './carousel-container';
 import BottomButtonsSlider from './bottom-buttons';
 import Arrow from './carousel-arrows';
 import isWithinBoundry from '../helpers/is-index-within';
+import Images, { ProjectTitles } from '../project/project-list';
 
 class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.imageHeight = 392;
+    this.imageHeight = window.innerHeight > 767 ? 500 : 300;
+    this.imageHeightTitle = window.innerHeight > 767 ? 500 : 100;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
+      pixelsToMoveTitle: 0,
     };
   }
 
   slideTo(idx) {
     const pixelsToMove = idx * this.imageHeight * -1;
-    this.setState({ pixelsToMove, activeImageIdx: idx });
+    const pixelsToMoveTitle = idx * this.imageHeightTitle * -1;
+    this.setState({ pixelsToMove, activeImageIdx: idx, pixelsToMoveTitle });
   }
 
   goToImage(direction) {
@@ -28,12 +32,17 @@ class ProjectsContainer extends Component {
 
     if (isWithinBoundry(nextIdx)) {
       const pixelsToMove = nextIdx * this.imageHeight * -1;
-      this.setState({ pixelsToMove, activeImageIdx: nextIdx });
+      const pixelsToMoveTitle = nextIdx * this.imageHeightTitle * -1;
+      this.setState({
+        pixelsToMove,
+        activeImageIdx: nextIdx,
+        pixelsToMoveTitle,
+      });
     }
   }
 
   render() {
-    const { activeImageIdx, pixelsToMove } = this.state;
+    const { activeImageIdx, pixelsToMove, pixelsToMoveTitle } = this.state;
 
     return (
       <main className="projects__main-container" data-test-project-container>
@@ -51,10 +60,19 @@ class ProjectsContainer extends Component {
             className="welcome__section--subheader-message"
             data-test-welcome-subjeader-message-section
           >
-            I am a Frontend Engineer at the Bay Area
+            I am a Software Engineer in California
           </h4>
         </section>
-        <Carousel pixelsToMove={pixelsToMove} />
+
+        <div className="carousels__wrapper" data-test-carousels-wrapper>
+          <Carousel pixelsToMove={pixelsToMoveTitle} direction="down">
+            <ProjectTitles />
+          </Carousel>
+          <Carousel pixelsToMove={pixelsToMove} direction="up">
+            <Images />
+          </Carousel>
+        </div>
+
         <BottomButtonsSlider
           activeButton={activeImageIdx}
           slideTo={idx => this.slideTo(idx)}

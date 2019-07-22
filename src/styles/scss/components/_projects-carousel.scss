@@ -7,13 +7,15 @@
 }
 
 .welcome__section--message {
-  color: $darkest-blue;
   height: 300px;
   width: $w-full;
+
   @include display-flex;
   flex-direction: column;
   justify-content: center;
+
   background-image: linear-gradient(rgb(25, 30, 56), rgb(32, 38, 71));
+  color: $darkest-blue;
 }
 
 .welcome__section--header-message {
@@ -28,15 +30,21 @@
   font-weight: 300;
 }
 
+.carousels__wrapper {
+  @include display-flex;
+  margin: 35px;
+  justify-content: center;
+}
+
 /* Carousel Component */
 
 .carousel__outer-wrapper {
-  width: 300px;
+  width: 500px;
+  height: 500px;
 
   display: flex;
   justify-content: center;
   overflow: hidden;
-  height: 392px;
 }
 
 .carousel__inner-wrapper {
@@ -44,31 +52,45 @@
 
   height: $h-full;
   width: $w-full;
-
 }
 
 /* Images Component */
 
-.carousel__slide-container--thumbnail {
-  height: 300px;
-
-  @include reset-list;
+.carousel__slide--thumbnail-link {
+  height: 500px;
 }
 
 .carousel__slide-image {
-  height: 300px;
-  width: 300px;
+  height: 500px;
+  width: 500px;
 }
 
 .carousel__slide--project-header {
   color: $darkest-blue;
-  border: 0;
 
-  width: $w-full;
+  height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  border: 0;
 
   font-size: 30px;
   font-weight: 800;
 }
+
+.carousel__header-container {
+  transform: translateY(-2500px);
+}
+
+/* ProjectTitles Component */
+
+.carousel__slide--header-link {
+  text-decoration: none;
+}
+
 
 /* Arrows Component */
 
@@ -142,5 +164,8 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 767px) {
 
+
+}
 

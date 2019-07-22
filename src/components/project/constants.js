@@ -12,7 +12,7 @@ const imgUrls = [
     pictureUrl: `${portfolio}`,
     projectName: 'Portfolio',
     description: `Julie Hutchinson's personal portfolio site`,
-    technologies: 'React, Sass, Jest, Enzyme',
+    technologies: 'React, React Router DOM, Sass, Jest, Enzyme',
     gitHub:
       'https://github.com/juliehutchinson001/juliehutchinson001.github.io',
     backgroundColor: '#3AA9BC',
@@ -29,8 +29,10 @@ const imgUrls = [
   {
     pictureUrl: `${chat}`,
     projectName: 'Chat Room App',
-    description: 'This is a backend app that implements the functionality of a chatroom app featuring private rooms.',
-    technologies: 'Javascript, Node, Express, Jest, Bootstrap, HTML, socket.io.',
+    description:
+      'This is a backend app that implements the functionality of a chatroom app featuring private rooms.',
+    technologies:
+      'Javascript, Node, Express, Jest, Bootstrap, HTML, socket.io.',
     gitHub: 'https://github.com/juliehutchinson001/sockets',
     live: 'https://julie-socketio.herokuapp.com/',
     backgroundColor: '#437EB4',
@@ -38,9 +40,11 @@ const imgUrls = [
   {
     pictureUrl: `${asana}`,
     projectName: 'Asana Task Manager',
-    description: {"This is a new feature for Asana's users that allows them to hide, delete, update, create and show all tasks they have in their personal accounts from Asana."},
+    description:
+      "This is a new feature for Asana's users that allows them to hide, delete, update, create and show all tasks they have in their personal accounts from Asana.",
     technologies: 'Javascript, Sass, BEM, HTML, CRUD.',
-    gitHub: 'https://github.com/juliehutchinson001/javascript_practice/tree/master/API/asana_take_home_Julie_Hutchinson',
+    gitHub:
+      'https://github.com/juliehutchinson001/javascript_practice/tree/master/API/asana_take_home_Julie_Hutchinson',
     backgroundColor: '#BC8894',
   },
   {
@@ -66,7 +70,8 @@ const imgUrls = [
   {
     pictureUrl: 'https://cdn.filestackcontent.com/lHqCTTiZQDOuaLO1fWDW',
     projectName: 'Tweet Generator',
-    description: "Program pythonic data structures to generate a sentence of Arthur Conan Doyle's, The Adventures of Sherlock Holmes. Develop an nth markov chain to collect semi-random words out of a corpus to generate an approximation of a grammatically correct sentence.",
+    description:
+      "Program pythonic data structures to generate a sentence of Arthur Conan Doyle's, The Adventures of Sherlock Holmes. Develop an nth markov chain to collect semi-random words out of a corpus to generate an approximation of a grammatically correct sentence.",
     technologies:
       'Python, Flask, Data Structures, Jinja2 Templating, Command Line.',
     gitHub: 'https://github.com/juliehutchinson001/Tweet-Generator',

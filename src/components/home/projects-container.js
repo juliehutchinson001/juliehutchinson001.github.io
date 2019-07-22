@@ -10,24 +10,22 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
+    this.imageHeight = window.innerWidth > 767 ? 600 : 300;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
-      pixelsToMoveTitle: 0,
     };
   }
 
   componentDidMount() {
     window.addEventListener('resize', () => {
-      this.imageHeight = window.innerHeight > 767 ? 600 : 300;
-      this.imageHeightTitle = window.innerHeight > 767 ? 600 : 100;
+      this.imageHeight = window.innerWidth > 767 ? 600 : 300;
     });
   }
 
   slideTo(idx) {
     const pixelsToMove = idx * this.imageHeight * -1;
-    const pixelsToMoveTitle = idx * this.imageHeightTitle * -1;
-    this.setState({ pixelsToMove, activeImageIdx: idx, pixelsToMoveTitle });
+    this.setState({ pixelsToMove, activeImageIdx: idx });
   }
 
   goToImage(direction) {
@@ -37,22 +35,17 @@ class ProjectsContainer extends Component {
 
     if (isWithinBoundry(nextIdx)) {
       const pixelsToMove = nextIdx * this.imageHeight * -1;
-      const pixelsToMoveTitle = nextIdx * this.imageHeightTitle * -1;
-      this.setState({
-        pixelsToMove,
-        activeImageIdx: nextIdx,
-        pixelsToMoveTitle,
-      });
+      this.setState({ pixelsToMove, activeImageIdx: nextIdx });
     }
   }
 
   render() {
-    const { activeImageIdx, pixelsToMove, pixelsToMoveTitle } = this.state;
+    const { activeImageIdx, pixelsToMove } = this.state;
 
     return (
       <main className="projects__main-container" data-test-project-container>
         <div className="carousels__wrapper" data-test-carousels-wrapper>
-          <Carousel pixelsToMove={pixelsToMoveTitle} direction="down">
+          <Carousel pixelsToMove={pixelsToMove} direction="down">
             <ProjectTitles />
           </Carousel>
           <Carousel pixelsToMove={pixelsToMove} direction="up">

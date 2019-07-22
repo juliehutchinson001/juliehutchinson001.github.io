@@ -51,8 +51,7 @@
 
   height: 600px;
 
-  display: flex;
-  align-items: center;
+  @include display-flex;
   justify-content: center;
   margin: 0;
 
@@ -63,7 +62,7 @@
 }
 
 .carousel__header-container {
-  transform: translateY(-3000px);
+  transform: translateY(-5400px);
 }
 
 /* ProjectTitles Component */
@@ -155,7 +154,37 @@
   margin: $seven-pixels 0;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
+  .carousels__wrapper {
+    @include display-flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 600px;
+  }
+
+  /* Carousel Component */
+
+  .carousel__outer-wrapper {
+    height: 300px;
+  }
+
+  .carousel__inner-wrapper {
+    transition: transform 1s ease;
+  }
+
+  /* Images Component */
+
+  .carousel__slide--thumbnail-link {
+    height: 300px;
+  }
+
+  .carousel__slide--project-header {
+    height: 300px;
+  }
+
+  .carousel__header-container {
+    transform: translateY(-2700px);
+  }
 
 
 }

@@ -4,12 +4,9 @@ import skills from './constants';
 const Skills = () => {
   const allSkills = skills.map(skillInfo => {
     const { section, description } = skillInfo;
-    const bioClass = section.includes('Unix')
-      ? 'bio-skill__header terminal'
-      : 'bio-skill__header';
     return (
       <li key={`${description}`} className="bio-skill" data-test-bio-skill>
-        <h3 className={bioClass}>{section}</h3>
+        <h3 className="bio-skill__header">{section}</h3>
         <p className="bio-skill__content">{description}</p>
       </li>
     );

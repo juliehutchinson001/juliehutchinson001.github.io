@@ -44,7 +44,7 @@
   width: 2.14rem;
 
   border: 1px solid $lightest-grey;
-  border-radius: 1rem;
+  border-radius: 2rem;
 
   margin-right: 0.5rem;
 }
@@ -75,6 +75,30 @@
   padding-bottom: 20px;
 }
 
+.welcome__section--message {
+  height: 300px;
+  width: $w-full;
+
+  @include display-flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: linear-gradient(rgb(25, 30, 56), rgb(32, 38, 71));
+  color: $darkest-blue;
+}
+
+.welcome__section--header-message {
+  font-size: 36px;
+  font-weight: 300;
+  color: $lightest-grey;
+}
+
+.welcome__section--subheader-message {
+  font-size: 14px;
+  color: $light-blue;
+  font-weight: 300;
+}
+
 @media screen and (min-width: 450px) {
   .navigation__top {
     font-size: 0.9rem;
@@ -95,7 +119,6 @@
   .active-section {
     font-weight: 800;
   }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -120,4 +143,15 @@
     font-size: 24px;
   }
 
+  .welcome__section--header-message {
+    font-size: 46px;
+    font-weight: 300;
+    color: $lightest-grey;
+  }
+
+  .welcome__section--subheader-message {
+    font-size: 16px;
+    color: $light-blue;
+    font-weight: 300;
+  }
 }

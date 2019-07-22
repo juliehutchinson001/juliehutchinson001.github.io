@@ -34,6 +34,7 @@ export const ProjectTitles = withRouter(({ match }) => {
         data-test-carousel-slide-header-link
       >
         <h1
+          style={{ backgroundColor: `${imgUrls[i].backgroundColor}` }}
           className="carousel__slide--project-header"
           data-test-carousel-slide-project-header
         >

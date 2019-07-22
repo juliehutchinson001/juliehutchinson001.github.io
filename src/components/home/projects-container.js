@@ -10,19 +10,22 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.imageHeight = window.innerHeight > 767 ? 500 : 300;
-    this.imageHeightTitle = window.innerHeight > 767 ? 500 : 100;
+    this.imageHeight = window.innerWidth > 767 ? 600 : 300;
     this.state = {
       activeImageIdx: 0,
       pixelsToMove: 0,
-      pixelsToMoveTitle: 0,
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      this.imageHeight = window.innerWidth > 767 ? 600 : 300;
+    });
   }
 
   slideTo(idx) {
     const pixelsToMove = idx * this.imageHeight * -1;
-    const pixelsToMoveTitle = idx * this.imageHeightTitle * -1;
-    this.setState({ pixelsToMove, activeImageIdx: idx, pixelsToMoveTitle });
+    this.setState({ pixelsToMove, activeImageIdx: idx });
   }
 
   goToImage(direction) {
@@ -32,40 +35,17 @@ class ProjectsContainer extends Component {
 
     if (isWithinBoundry(nextIdx)) {
       const pixelsToMove = nextIdx * this.imageHeight * -1;
-      const pixelsToMoveTitle = nextIdx * this.imageHeightTitle * -1;
-      this.setState({
-        pixelsToMove,
-        activeImageIdx: nextIdx,
-        pixelsToMoveTitle,
-      });
+      this.setState({ pixelsToMove, activeImageIdx: nextIdx });
     }
   }
 
   render() {
-    const { activeImageIdx, pixelsToMove, pixelsToMoveTitle } = this.state;
+    const { activeImageIdx, pixelsToMove } = this.state;
 
     return (
       <main className="projects__main-container" data-test-project-container>
-        <section
-          className="welcome__section--message"
-          data-test-welcome-message-section
-        >
-          <h1
-            className="welcome__section--header-message"
-            data-test-welcome-header-message-section
-          >
-            JULIE HUTCHINSON&#x2019;S SITE
-          </h1>
-          <h4
-            className="welcome__section--subheader-message"
-            data-test-welcome-subjeader-message-section
-          >
-            I am a Software Engineer in California
-          </h4>
-        </section>
-
         <div className="carousels__wrapper" data-test-carousels-wrapper>
-          <Carousel pixelsToMove={pixelsToMoveTitle} direction="down">
+          <Carousel pixelsToMove={pixelsToMove} direction="down">
             <ProjectTitles />
           </Carousel>
           <Carousel pixelsToMove={pixelsToMove} direction="up">

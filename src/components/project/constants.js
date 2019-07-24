@@ -70,7 +70,7 @@ const projectsDB = [
   },
   {
     pictureUrl: 'https://cdn.filestackcontent.com/lHqCTTiZQDOuaLO1fWDW',
-    projectName: 'Sherklock Holmes Sentence Generator',
+    projectName: 'Sherlock Holmes Sentence Generator',
     description: `This is a command line program that uses pythonic data structures to generate sentences of Sir Arthur Conan Doyle's stories, The Adventures of Sherlock Holmes. With the development of an nth-markov chain, random words are taken out of a text corpus to generate an approximation of a grammatically correct quote.`,
     technologies:
       'Python, Flask, Data Structures, Jinja2 Templating, Command Line.',

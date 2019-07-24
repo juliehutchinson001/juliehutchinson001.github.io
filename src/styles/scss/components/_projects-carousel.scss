@@ -89,6 +89,7 @@
 .carousel__slide-button--prev {
   background: none;
   color: $dark-blue;
+  cursor: pointer;
 
   border: 1px solid transparent;
   outline: none;
@@ -100,6 +101,7 @@
 .carousel__slide-button--next {
   background: none;
   color: $dark-blue;
+  cursor: pointer;
 
   border: 1px solid transparent;
   outline: none;
@@ -129,6 +131,7 @@
 
 .button-act {
   background-color: $dark-blue;
+  cursor: pointer;
 
   height: $seven-pixels;
   width: $seven-pixels;
@@ -142,6 +145,7 @@
 
 .button-no-act {
   background-color: transparent;
+  cursor: pointer;
 
   height: $seven-pixels;
   width: $seven-pixels;

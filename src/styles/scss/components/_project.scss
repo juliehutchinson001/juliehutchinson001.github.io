@@ -64,11 +64,15 @@
 }
 
 .project__links-wrapper {
-  width: 90%;
+  width: $w-full;
+  padding: 0;
 
   .project__links {
     width: $w-full;
+    padding: 0;
+    list-style: none;
     margin-bottom: 0.9rem;
+    font-size: 1rem;
 
     text-decoration: none;
   }
@@ -76,18 +80,18 @@
 
 .project__link--github {
   text-decoration: none;
-  color: $darkest-blue;
+  color: $dark-grey;
 }
 
 .project__link--github:active {
   text-decoration: underline;
-  color: #2F375F;
+  color: #435bd3;
   text-decoration-color: $darkest-blue;
 }
 
 .project__link--github:visited {
   text-decoration: none;
-  color: #2F375F;
+  color: #435bd3;
 }
 
 @media screen and (min-width: 768px) {

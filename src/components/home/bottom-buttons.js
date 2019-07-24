@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import imgUrls from '../project/constants';
+import projectsDB from '../project/constants';
 
 const BottomButtonsSlider = ({ activeButton, children, slideTo }) => {
-  const multipleButtons = imgUrls.map((image, idx) => (
+  const multipleButtons = projectsDB.map((image, idx) => (
     <button
       type="button"
       className={activeButton === idx ? 'button-act' : 'button-no-act'}

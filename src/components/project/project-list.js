@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import imgUrls from './constants';
+import projectsDB from './constants';
 import slugify from '../helpers/slugify';
 
 const Images = ({ match }) => {
-  const allImages = imgUrls.map(({ projectName, pictureUrl }) => (
+  const allImages = projectsDB.map(({ projectName, pictureUrl }) => (
     <Link
       key={projectName}
       className="carousel__slide--thumbnail-link"
@@ -25,20 +25,20 @@ const Images = ({ match }) => {
 
 export const ProjectTitles = withRouter(({ match }) => {
   const allImages = [];
-  for (let i = imgUrls.length - 1; i > -1; i -= 1) {
+  for (let i = projectsDB.length - 1; i > -1; i -= 1) {
     allImages.push(
       <Link
         className="carousel__slide--header-link"
-        key={imgUrls[i].projectName}
-        to={`${match.url}/${slugify(imgUrls[i].projectName)}`}
+        key={projectsDB[i].projectName}
+        to={`${match.url}/${slugify(projectsDB[i].projectName)}`}
         data-test-carousel-slide-header-link
       >
         <h1
-          style={{ backgroundColor: `${imgUrls[i].backgroundColor}` }}
+          style={{ backgroundColor: `${projectsDB[i].backgroundColor}` }}
           className="carousel__slide--project-header"
           data-test-carousel-slide-project-header
         >
-          {imgUrls[i].projectName}
+          {projectsDB[i].projectName}
         </h1>
       </Link>
     );

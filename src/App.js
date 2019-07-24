@@ -7,7 +7,7 @@ import Blog from './components/blogs/blog';
 import BioContainer from './components/about/about-me';
 import Footer from './components/footer';
 import NotFound from './components/not-found';
-import singleProject from './components/project/individual-project';
+import Project from './components/project/individual-project';
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
       <Switch>
         <Redirect exact from="/" to="/projects" />
         <Route path="/projects" exact component={ProjectsContainer} />
-        <Route path="/projects/:id" component={singleProject} />
+        <Route path="/projects/:id" component={Project} />
         <Route path="/blogs" exact component={BlogDashboard} />
         <Route path="/blogs/:id" component={Blog} />
         <Route path="/about" component={BioContainer} />

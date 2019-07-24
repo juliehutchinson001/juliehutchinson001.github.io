@@ -27,7 +27,7 @@ const BioContainer = () => (
   <main className="bio__main-container" data-test-bio-container>
     <section className="bio__intro-container" data-test-bio-intro-container>
       <h1 className="bio__header" data-test-bio-header>
-        Welcome to another portfolio blah
+        About Julie...
       </h1>
       <p className="bio__first--paragraph" data-test-bio-first-paragraph>
         Julie is a frontend engineer originally from Florida that relocated to

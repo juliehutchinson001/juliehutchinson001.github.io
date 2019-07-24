@@ -9,11 +9,16 @@
 
 .carousels__wrapper {
   @include display-flex;
-  margin: 35px;
+  margin: 2.18rem;
   justify-content: center;
 
+  -webkit-box-shadow: 7px 10px 35px 0px rgba(5,5,15,0.63);
+  -moz-box-shadow: 7px 10px 35px 0px rgba(5,5,15,0.63);
+  box-shadow: 7px 10px 35px 0px rgba(5,5,15,0.63);
+  border-radius: 1%;
+
   width: 95vw;
-  height: 600px;
+  height: 37.5rem;
 }
 
 /* Carousel Component */
@@ -39,6 +44,7 @@
 .carousel__slide--thumbnail-link {
   height: 600px;
   display: block;
+  position: relative;
 }
 
 .carousel__slide-image {
@@ -69,7 +75,12 @@
 
 .carousel__slide--header-link {
   text-decoration: none;
-  display: block;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .carousel__slide--project-header {
+    width: $w-full;
+  }
 }
 
 
@@ -98,9 +109,10 @@
 }
 
 .legend__additional-info {
-  color: $darkest-blue;
-  font-size: 13px;
-  margin: $seven-pixels 0;
+  color: $dark-grey;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 1rem 0;
 }
 
 
@@ -124,7 +136,7 @@
   border: 1px solid $dark-blue;
   border-radius: $seven-pixels;
 
-  margin-right: $seven-pixels;
+  margin-right: 1rem;
   padding: 0;
 }
 
@@ -137,7 +149,7 @@
   border: 1px solid $dark-blue;
   border-radius: $seven-pixels;
 
-  margin-right: $seven-pixels;
+  margin-right: 1rem;
   padding: 0;
 }
 
@@ -176,6 +188,11 @@
 
   .carousel__slide--thumbnail-link {
     height: 300px;
+  }
+
+  .carousel__slide-image {
+    height: $h-full;
+    width: $w-full;
   }
 
   .carousel__slide--project-header {

@@ -30,20 +30,26 @@ const BioContainer = () => (
         About Julie...
       </h1>
       <p className="bio__first--paragraph" data-test-bio-first-paragraph>
-        Julie is a frontend engineer originally from Florida that relocated to
-        California following her dream of becoming a UI engineer for a tech
-        company.
+        I am a frontend engineer originally from Florida that relocated to
+        California following one of my dreams of becoming a UI engineer for a
+        tech company. My passion for UI became evident when I understood the
+        infinite possibilities the JavaScript ecosystem offers in the browser
+        and &#x2019;behind the curtains&#x2019; when developing a visually
+        appealling site. I enjoy building from scratch accessible and
+        good-looking snippets that the public can see and appreciate.
       </p>
       <p className="bio__second--paragraph" data-test-bio-second-paragraph>
-        Julie&#x2019;s greatest interests from the moment she relocated are
-        focused on semantic application of UI and proper layout of websites. In
-        her free time she designs code snippets to test her UI skillset and
-        expand them.
+        My greatest interests from the moment I relocated to the Bay area are
+        focused on keeping up with best practices of everything the User
+        Interface entails; for example, an accessible site that makes use of
+        semantic HTML and CSS. In my free time, I constantly do research of
+        anything relating UI, and challenge my coding practices by mimicking
+        code snippets to improve my skillset.
       </p>
       <p className="bio__third--paragraph" data-test-bio-third-paragraph>
-        Julie graduated from her BS in Electronics Engineering, where she
-        discovered her passion by building a number of projects with a
-        programming focus including her thesis.
+        I finished my BS in Electronics Engineering in 2017, where I experienced
+        how much fun coding can be, and built a number of projects with a
+        programming focus including my thesis.
       </p>
     </section>
     <Skills />

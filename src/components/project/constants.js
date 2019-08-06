@@ -11,21 +11,12 @@ const projectsDB = [
   {
     pictureUrl: `${portfolio}`,
     projectName: 'Portfolio',
-    description: `Julie Hutchinson's personal portfolio site`,
+    description: `Julie Hutchinson's personal portfolio site. I built this site as a personal signature of my coding style. I like following semantic HTML, apply testing to the components rendered and choose my colors to make a piece of text and everything a user can see more readable and 'clean'.`,
     technologies: 'React, React Router DOM, Sass, Jest, Enzyme',
     gitHub:
       'https://github.com/juliehutchinson001/juliehutchinson001.github.io',
-    live: 'http://localhost:3000/projects',
+    live: 'https://juliehutchinson001.github.io',
     backgroundColor: '#84CEC7',
-  },
-  {
-    pictureUrl: `${lyndaMock}`,
-    projectName: 'Lynda Mock',
-    description:
-      'A frontend view of a mock of Lynda Learning website. It features some of the user interactions that a person can use when creating a custom playlist to study and additioning new videos to a playlist.',
-    technologies: 'React, Sass, Jest, Enzyme, Node, Express',
-    gitHub: 'https://github.com/juliehutchinson001/lynda_search_course_mock',
-    backgroundColor: '#4780B1',
   },
   {
     pictureUrl: `${chat}`,
@@ -42,19 +33,30 @@ const projectsDB = [
     pictureUrl: `${asana}`,
     projectName: 'Asana Task Manager',
     description:
-      "This is a new feature for Asana's users that allows them to hide, delete, update, create and show all tasks they have in their personal accounts from Asana.",
+      "This is a mock Asana's task management system that allows me to hide, delete, update, create and show all tasks I have in my account from Asana. I am able to manipulate the tasks created by making calls to the API.",
     technologies: 'Javascript, Sass, BEM, HTML, CRUD.',
     gitHub:
-      'https://github.com/juliehutchinson001/javascript_practice/tree/master/API/asana_take_home_Julie_Hutchinson',
+      'https://github.com/juliehutchinson001/online-task-manager/blob/master/js/index.js',
+    live: 'https://juliehutchinson001.github.io/online-task-manager/',
     backgroundColor: '#E86375',
+  },
+  {
+    pictureUrl: `${lyndaMock}`,
+    projectName: 'Lynda Mock',
+    description:
+      'A frontend view of a mock of Lynda Learning website. It features some of the user interactions that a person can use when creating a custom playlist to study and additioning new videos to a playlist.',
+    technologies: 'React, Sass, Jest, Enzyme, Node, Express',
+    gitHub: 'https://github.com/juliehutchinson001/lynda_search_course_mock',
+    backgroundColor: '#4780B1',
   },
   {
     pictureUrl: `${princess}`,
     projectName: 'Animal Trading Card',
-    description: 'This is a trading card of my favorite animal.',
+    description:
+      'This is a trading card of my favorite animal. This is one of my firsts frontend code snippet that I applied when I was still learning about CSS3 and HTML5. I wanted to utilize what CSS had to offer at that time, including the use of variables and other features as well',
     technologies: 'HTML, CSS.',
     gitHub:
-      'https://github.com/juliehutchinson001/udacity_google_scholarship/tree/master/fend-animal-trading-cards-master',
+      'https://github.com/juliehutchinson001/udacity_google_scholarship/tree/master/fend-animal-trading-cards-master/trading-card',
     live: 'https://codepen.io/juliethGomez001/pen/WLzBZO',
     backgroundColor: '#F0965F',
   },

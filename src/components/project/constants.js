@@ -11,7 +11,7 @@ const projectsDB = [
   {
     pictureUrl: `${portfolio}`,
     projectName: 'Portfolio',
-    description: `Julie Hutchinson's personal portfolio site. I built this site as a personal signature of my coding style. I like following semantic HTML, apply testing to the components rendered and choose my colors to make a piece of text and everything a user can see more readable and 'clean'.`,
+    description: `Julie Hutchinson's personal portfolio site. I built this site as a personal signature of my coding style. I like following semantic HTML, apply testing to the components rendered and choose my colors to make a piece of text, and everything a user can see, more readable and 'clean'.`,
     technologies: 'React, React Router DOM, Sass, Jest, Enzyme',
     gitHub:
       'https://github.com/juliehutchinson001/juliehutchinson001.github.io',

@@ -7,7 +7,7 @@ const skills = [
   {
     section: 'CSS / UI',
     description:
-      'CSS3, Sass, BEM, Semantic UI, CSS in JS (Aphrodite), Tailwind, Bootstrap.',
+      'CSS3, Sass, BEM, Semantic UI, CSS in JS (Aphrodite), Tailwind, Bootstrap, Wix/WordPress.',
   },
   {
     section: 'Computer Science',
@@ -15,11 +15,13 @@ const skills = [
   },
   {
     section: `Version Control${'\n'}Unix`,
-    description: 'Git/GitHub collaboration, Unix/Linux, Command Line, VIM.',
+    description:
+      'Git/GitHub collaboration, Git/GitLab version control, Unix/Linux, Command Line, VIM.',
   },
   {
     section: 'Backend',
-    description: 'MongoDB (Mongoose), Node.js, Express.js, RESTful Routes.',
+    description:
+      'MongoDB (Mongoose), Node.js, Express.js, RESTful Routes, Firebase, graphQL.',
   },
 ];
 

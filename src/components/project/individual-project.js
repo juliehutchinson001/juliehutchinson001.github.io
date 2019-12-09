@@ -14,14 +14,21 @@ const Project = ({ match }) => {
   if (!project) {
     return <NotFoundContainer />;
   }
-  const {
-    projectName,
-    technologies,
-    gitHub,
-    live,
-    pictureUrl,
-    description,
-  } = project;
+  const { projectName, technologies, links, pictureUrl, description } = project;
+
+  const projectLinks = links.map(({ link, name }) => (
+    <li className="project__links" key={name} data-test-project-links>
+      <a
+        href={link}
+        className="project__link--github"
+        data-test-project-link-github
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {name}
+      </a>
+    </li>
+  ));
 
   return (
     <main className="project__outer-wrapper" data-test-project-outer-wrapper>
@@ -73,32 +80,7 @@ const Project = ({ match }) => {
           LINKS
         </h3>
         <ul className="project__links-wrapper" data-test-project-links-wrapper>
-          {gitHub && (
-            <li className="project__links" data-test-project-links>
-              <a
-                href={`${gitHub}`}
-                className="project__link--github"
-                data-test-project-link-github
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Code
-              </a>
-            </li>
-          )}
-          {live && (
-            <li className="project__links" data-test-project-links>
-              <a
-                href={`${live}`}
-                className="project__link--github"
-                data-test-project-link-github
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Peek Into
-              </a>
-            </li>
-          )}
+          {projectLinks}
         </ul>
       </section>
     </main>

@@ -35,21 +35,23 @@ const BioContainer = () => (
         tech company. My passion for UI became evident when I understood the
         infinite possibilities the JavaScript ecosystem offers in the browser
         and &#x2019;behind the curtains&#x2019; when developing a visually
-        appealling site. I enjoy building from scratch accessible and
-        good-looking snippets that the public can see and appreciate.
+        appealling and performant site. I enjoy building from scratch accessible
+        and good-looking website the public can use and appreciate.
       </p>
       <p className="bio__second--paragraph" data-test-bio-second-paragraph>
         My greatest interests from the moment I relocated to the Bay area are
         focused on keeping up with best practices of everything the User
         Interface entails; for example, an accessible site that makes use of
         semantic HTML and CSS. In my free time, I constantly do research of
-        anything relating UI, and challenge my coding practices by mimicking
-        code snippets to improve my skillset.
+        anything relating UI, and challenge my coding practices by duplicating
+        websites to improve my skillset.
       </p>
       <p className="bio__third--paragraph" data-test-bio-third-paragraph>
-        I finished my BS in Electronics Engineering in 2017, where I experienced
-        how much fun coding can be, and built a number of projects with a
-        programming focus including my thesis.
+        I finished my Bachelors in Science in 2017, where I experienced how much
+        fun coding can be, and built a number of projects with a programming
+        focus including my thesis. After finishing my studies, my work
+        emphazises in both the frontend side of a site and sometimes the backend
+        as well when working with NodeJs.
       </p>
     </section>
     <Skills />
